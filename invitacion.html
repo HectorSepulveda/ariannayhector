@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boda Arianna y Hector | Invitación</title>
+    <meta name="description" content="Invitación a la boda de Arianna y Hector" />
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=MonteCarlo&family=Spectral:wght@400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <audio id="bg-audio" src="assets/intro-music-S2szIoUv.mp3" preload="auto" autoplay muted loop playsinline></audio>
+
+    <button id="audio-toggle"
+        class="fixed bottom-6 right-6 z-50 p-3 rounded-full bg-primary/90 text-primary-foreground shadow-lg hover:bg-primary transition-all duration-300 backdrop-blur-sm"
+        aria-label="Silenciar" type="button">
+        <span class="sr-only">Silenciar</span>
+        <svg id="audio-on" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path
+                d="M3 9v6h4l5 4V5L7 9H3zm13.5 3a4.5 4.5 0 0 0-2.5-4.06v8.12A4.5 4.5 0 0 0 16.5 12zm2.5 0a7 7 0 0 1-4 6.32v-2.3a4.99 4.99 0 0 0 2-4.02 4.99 4.99 0 0 0-2-4.02v-2.3a7 7 0 0 1 4 6.32z" />
+        </svg>
+        <svg id="audio-off" xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 hidden" viewBox="0 0 24 24"
+            fill="currentColor">
+            <path
+                d="M16.5 12a4.5 4.5 0 0 0-2.5-4.06v2.53l2.5 2.5V12zm-9.5-3H3v6h4l5 4v-6.17l-5-5.83zm13.19 10.19L4.81 3.81 3.39 5.22l5.1 5.1H7v6h4l5 4v-5.17l2.61 2.61 1.41-1.41z" />
+        </svg>
+    </button>
+
+    
+<div id="intro-overlay" class="fixed inset-0 z-50 cursor-pointer" style="background-color: #f5f0e8">
+        <!-- <img id="intro-image" src="assets/envelope-intro-CB40hjGZ.jpg" alt=""
+            class="absolute inset-0 w-full h-full object-cover z-10" /> -->
+        <video id="intro-video" src="assets/video-sobre2.mp4" class="w-full h-full object-cover" autoplay playsinline
+            muted preload="auto"></video>
+    </div> 
+  
+   
+    <main class="bg-background">
+
+        
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-ivory" id="inicio">
+            <div class="absolute inset-0">
+                <div class="relative w-full h-full">
+                    <div class="absolute inset-0 overflow-hidden">
+                        <div class="carousel w-full h-full flex transition-transform duration-1000 ease-out" id="hero-carousel"></div>
+                    </div>
+                    <div class="absolute inset-0 bg-black/60"></div>
+                </div>
+                <div class="absolute inset-0 bg-black/55"></div>
+            </div>
+            <div class="relative z-10 text-center px-6 max-w-4xl mx-auto">
+                <p class="text-xs md:text-sm tracking-[0.5em] uppercase text-white/80 mb-6 font-body" style="font-size: 17px;">Nos casamos</p>
+                <br>
+                <h1 class="mb-4">
+                    <span
+                        class="font-script text-5xl md:text-7xl lg:text-8xl text-white block leading-tight drop-shadow-lg">Arianna</span>
+                    <span
+                        class="font-display text-2xl md:text-3xl lg:text-4xl font-light text-white my-2 md:my-4 block italic drop-shadow-md">&amp;</span>
+                    <span
+                        class="font-script text-5xl md:text-7xl lg:text-8xl text-white block leading-tight drop-shadow-lg">Héctor</span>
+                </h1>
+                <br>
+                <div class="flex items-center justify-center gap-4 my-6 md:my-8">
+                    <span class="h-px bg-white/50 w-12 md:w-20"></span>
+                    <span class="text-white text-lg drop-shadow-md">❤︎</span>
+                    <span class="h-px bg-white/50 w-12 md:w-20"></span>
+                </div>
+                <p class="text-base md:text-lg font-display tracking-wider text-white/90 italic drop-shadow-md" style="font-size: 18px;">
+                    2 de Mayo del 2026
+                </p>
+            </div>
+            <button id="hero-cta"
+                class="absolute bottom-8 inset-x-0 z-10 flex flex-col items-center gap-2 text-center text-white hover:text-white/80 transition-colors cursor-pointer"
+                type="button">
+                <span class="text-xs tracking-[0.3em] uppercase font-body">Confirmar Asistencia</span>
+                <div class="animate-bounce">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 16l-6-6h12l-6 6z" />
+                    </svg>
+                </div>
+            </button>
+        </section>
+
+        <section id="countdown" class="section-padding relative overflow-hidden">
+            <div class="absolute inset-0">
+                <img src="assets/floral-background-B0YBMwJP.jpg" alt="" class="w-full h-full object-cover" />
+                <div class="absolute inset-0 bg-sage-dark/40"></div>
+            </div>
+            <div class="relative z-10 max-w-4xl mx-auto text-center">
+                <h2 class="section-heading font-script text-4xl md:text-5xl text-white mb-2">Cuenta regresiva</h2>
+                <p class="section-subtitle text-white/70 text-lg font-body tracking-wide mb-12">Para el día más especial de nuestras
+                    vidas</p>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
+                    <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 border border-white/20 rounded-lg">
+                        <span class="block font-display text-4xl md:text-6xl font-light text-white"
+                            data-unit="days">00</span>
+                        <span class="block mt-2 text-xs tracking-[0.2em] uppercase text-white/70 font-body">Dias</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 border border-white/20 rounded-lg">
+                        <span class="block font-display text-4xl md:text-6xl font-light text-white"
+                            data-unit="hours">00</span>
+                        <span class="block mt-2 text-xs tracking-[0.2em] uppercase text-white/70 font-body">Horas</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 border border-white/20 rounded-lg">
+                        <span class="block font-display text-4xl md:text-6xl font-light text-white"
+                            data-unit="minutes">00</span>
+                        <span
+                            class="block mt-2 text-xs tracking-[0.2em] uppercase text-white/70 font-body">Minutos</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm p-6 md:p-8 border border-white/20 rounded-lg">
+                        <span class="block font-display text-4xl md:text-6xl font-light text-white"
+                            data-unit="seconds">00</span>
+                        <span
+                            class="block mt-2 text-xs tracking-[0.2em] uppercase text-white/70 font-body">Segundos</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+                <section class="section-padding bg-ivory" id="historia">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark mb-2">Nuestra historia</h2>
+                    <p class="section-subtitle text-sage-dark/70 font-body tracking-wide">Un viaje que nos trajo hasta aqu&iacute;</p>
+                </div>
+                <div class="historia-wrap">
+                    <div class="historia-card">
+                        <div class="historia-badge">Nuestro Amor ❤︎</div>
+                        <p>Nos conocimos sin buscarlo, en un d&iacute;a cualquiera que termin&oacute; siendo inolvidable. Entre risas, caf&eacute;s y conversaciones que no se quer&iacute;an acabar, descubrimos que quer&iacute;amos caminar juntos.</p>
+                        <p>El tiempo nos regal&oacute; viajes, aprendizajes y momentos simples que se volvieron nuestros favoritos. Con cada paso, fuimos construyendo un hogar en el coraz&oacute;n del otro.</p>
+                        <div class="historia-quote">“Hoy nos amamos más que nunca”</div>
+                        <p>Gracias por ser parte de nuestra historia y por acompa&ntilde;arnos en este nuevo cap&iacute;tulo.</p>
+                    </div> 
+                     
+                    <div class="historia-side">
+                        <div class="historia-pill">Con amor, Ari y H&eacute;ctor</div>
+                        <div class="historia-image">
+                            <img src="assets/historia/IMG_6742.jpg" alt="Nuestra historia" loading="lazy" />
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="ubicacion" class="section-padding bg-sage/10">
+            <div class="max-w-5xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark mb-2">Ubicaci&oacute;n</h2>
+                    <p class="section-subtitle text-sage-dark/70 font-body tracking-wide">Nos encantar&aacute; compartir este d&iacute;a contigo</p>
+                </div>
+                <div class="grid md:grid-cols-2 gap-6 items-stretch">
+                    <div class="card-elegant card-elegant--ubicacion">
+                        <p class="text-sage-dark/60 uppercase tracking-[0.18em] text-xs font-body mb-3">Lugar del evento</p>
+                        <h3 class="font-display text-3xl text-sage-dark mb-2">Espacio Nehuen</h3>
+                        <p class="text-sage-dark/80 font-body text-lg leading-relaxed mb-6">Talagante, Regi&oacute;n Metropolitana</p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://maps.app.goo.gl/vfzizZq8ZCU36NeX8" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center rounded-md bg-sage-dark text-white px-4 py-2 text-sm font-medium hover:bg-sage-dark/90 transition-colors">
+                                Ver en Google Maps
+                            </a>
+                            <a href="https://ul.waze.com/ul?place=ChIJCVfWtRfhYpYRC8VT0gTMNes&ll=-33.63428670%2C-70.87407310&navigate=yes&utm_campaign=default&utm_source=waze_website&utm_medium=lm_share_location" target="_blank" rel="noopener noreferrer"
+                                class="inline-flex items-center justify-center rounded-md border border-sage-dark/30 text-sage-dark px-4 py-2 text-sm font-medium hover:bg-sage-dark hover:text-white transition-colors">
+                                Abrir en Waze
+                            </a>
+                        </div>
+                    </div>
+                    <div class="overflow-hidden rounded-xl border border-sage/20 shadow-sm min-h-[280px]">
+                        <iframe title="Mapa Espacio Nehuen"
+                            src="https://maps.google.com/maps?q=Espacio%20Nehuen%20Talagante&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                            class="w-full h-full min-h-[280px]" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="programa" class="section-padding bg-ivory programa relative overflow-hidden">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark mb-2">Programa</h2>
+                    <p class="section-subtitle text-sage-dark/70 font-body tracking-wide">Te esperamos para vivir juntos cada momento</p>
+                </div>
+
+                <div class="hidden md:block relative">
+                    <div class="programa-line absolute left-0 right-0 h-px bg-sage-dark/20"></div>
+                    <div class="grid grid-cols-6 gap-6 text-center programa-desktop-grid">
+                        <div>
+                            <span class="inline-flex items-center justify-center rounded-full bg-sage-dark text-white px-4 py-2 font-display programa-time">16:30</span>
+                            <div class="mx-auto my-5 w-14 h-14 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center">
+                                <span class="material-symbols-outlined programa-icon">groups</span>
+                            </div>
+                            <h3 class="font-display text-sage-dark mb-2 programa-title">Recepci&oacute;n</h3>
+                            <p class="text-sage-dark/70 font-body programa-desc">Llegada de invitados</p>
+                        </div>
+                        <div>
+                            <span class="inline-flex items-center justify-center rounded-full bg-sage-dark text-white px-4 py-2 font-display programa-time">17:00</span>
+                            <div class="mx-auto my-5 w-14 h-14 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center">
+                                <span class="material-symbols-outlined programa-icon">favorite</span>
+                            </div>
+                            <h3 class="font-display text-sage-dark mb-2 programa-title">Ceremonia</h3>
+                            <p class="text-sage-dark/70 font-body programa-desc">Intercambio de votos</p>
+                        </div>
+                        <div>
+                            <span class="inline-flex items-center justify-center rounded-full bg-sage-dark text-white px-4 py-2 font-display programa-time">18:00</span>
+                            <div class="mx-auto my-5 w-14 h-14 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center">
+                                <span class="material-symbols-outlined programa-icon">local_bar</span>
+                            </div>
+                            <h3 class="font-display text-sage-dark mb-2 programa-title">Coctel</h3>
+                            <p class="text-sage-dark/70 font-body programa-desc">Brindis de bienvenida</p>
+                        </div>
+                        <div>
+                            <span class="inline-flex items-center justify-center rounded-full bg-sage-dark text-white px-4 py-2 font-display programa-time">19:00</span>
+                            <div class="mx-auto my-5 w-14 h-14 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center">
+                                <span class="material-symbols-outlined programa-icon">restaurant</span>
+                            </div>
+                            <h3 class="font-display text-sage-dark mb-2 programa-title">Cena</h3>
+                            <p class="text-sage-dark/70 font-body programa-desc">Inicio del servicio de cena</p>
+                        </div>
+                        <div>
+                            <span class="inline-flex items-center justify-center rounded-full bg-sage-dark text-white px-4 py-2 font-display programa-time">20:00</span>
+                            <div class="mx-auto my-5 w-14 h-14 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center">
+                                <span class="material-symbols-outlined programa-icon">music_note</span>
+                            </div>
+                            <h3 class="font-display text-sage-dark mb-2 programa-title">Fiesta</h3>
+                            <p class="text-sage-dark/70 font-body programa-desc">Pista abierta y baile</p>
+                        </div>
+                        <div>
+                            <span class="inline-flex items-center justify-center rounded-full bg-sage-dark text-white px-4 py-2 font-display programa-time">01:00 AM</span>
+                            <div class="mx-auto my-5 w-14 h-14 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center">
+                                <span class="material-symbols-outlined programa-icon">celebration</span>
+                            </div>
+                            <h3 class="font-display text-sage-dark mb-2 programa-title">Cierre</h3>
+                            <p class="text-sage-dark/70 font-body programa-desc">Cierre del evento</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="md:hidden relative space-y-4">
+                    <div class="programa-line-mobile absolute top-8 bottom-8 w-px bg-sage-dark/20"></div>
+                    <div class="programa-mobile-item relative flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined programa-icon">groups</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="inline-flex items-center rounded-full bg-sage-dark text-white px-3 py-1 font-display programa-time">16:30</span>
+                            <p class="font-display text-sage-dark mt-2 mb-1 programa-title">Recepci&oacute;n</p>
+                            <p class="text-sage-dark/60 font-body programa-desc">Llegada de invitados</p>
+                        </div>
+                    </div>
+                    <div class="programa-mobile-item relative flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined programa-icon">favorite</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="inline-flex items-center rounded-full bg-sage-dark text-white px-3 py-1 font-display programa-time">17:00</span>
+                            <p class="font-display text-sage-dark mt-2 mb-1 programa-title">Ceremonia</p>
+                            <p class="text-sage-dark/60 font-body programa-desc">Intercambio de votos</p>
+                        </div>
+                    </div>
+                    <div class="programa-mobile-item relative flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined programa-icon">local_bar</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="inline-flex items-center rounded-full bg-sage-dark text-white px-3 py-1 font-display programa-time">18:00</span>
+                            <p class="font-display text-sage-dark mt-2 mb-1 programa-title">Coctel</p>
+                            <p class="text-sage-dark/60 font-body programa-desc">Brindis de bienvenida</p>
+                        </div>
+                    </div>
+                    <div class="programa-mobile-item relative flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined programa-icon">restaurant</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="inline-flex items-center rounded-full bg-sage-dark text-white px-3 py-1 font-display programa-time">19:00</span>
+                            <p class="font-display text-sage-dark mt-2 mb-1 programa-title">Cena</p>
+                            <p class="text-sage-dark/60 font-body programa-desc">Inicio del servicio de cena</p>
+                        </div>
+                    </div>
+                    <div class="programa-mobile-item relative flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined programa-icon">music_note</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="inline-flex items-center rounded-full bg-sage-dark text-white px-3 py-1 font-display programa-time">20:00</span>
+                            <p class="font-display text-sage-dark mt-2 mb-1 programa-title">Fiesta</p>
+                            <p class="text-sage-dark/60 font-body programa-desc">Pista abierta y baile</p>
+                        </div>
+                    </div>
+                    <div class="programa-mobile-item relative flex items-start gap-4">
+                        <div class="w-11 h-11 rounded-full border-2 border-sage-dark/30 bg-white flex items-center justify-center shrink-0">
+                            <span class="material-symbols-outlined programa-icon">celebration</span>
+                        </div>
+                        <div class="min-w-0">
+                            <span class="inline-flex items-center rounded-full bg-sage-dark text-white px-3 py-1 font-display programa-time">01:00 AM</span>
+                            <p class="font-display text-sage-dark mt-2 mb-1 programa-title">Cierre</p>
+                            <p class="text-sage-dark/60 font-body programa-desc">Cierre del evento</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-16 bg-sage/10" id="vestimenta">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-10">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark">Código de vestimenta</h2>
+                </div>
+                <div class="grid md:grid-cols-1 gap-6 max-w-2xl mx-auto">
+                    <div
+                        class="bg-white/70 backdrop-blur-sm rounded-xl p-6 border border-sage/20 text-center shadow-sm hover:shadow-md transition-shadow duration-300">
+                        <div class="w-12 h-12 mx-auto mb-4 rounded-full bg-sage/20 flex items-center justify-center">
+                            <span class="material-symbols-outlined text-sage-dark" aria-hidden="true">checkroom</span>
+                         
+                        </div>
+                       
+                        <h3 class="font-display text-lg text-sage-dark mb-2"><b>Formal</b></h3>
+                        <p class="text-sage-dark/70 font-body">Evita colores pasteles o blancos, <br> son de uso exclusivo de la novia.</p>
+                    </div>
+                  
+                </div>
+            </div>
+        </section>
+
+      
+
+        <section class="section-padding bg-ivory relative overflow-hidden" id="regalos">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark mb-6">Regalos</h2>
+                </div>
+                <div class="card-elegant text-center mb-10">
+                    <p class="text-sage-dark/70 font-body leading-relaxed">Tu presencia es el mejor regalo
+                        que podemos recibir, pero si desean hacernos un presente, preferimos una contribución para nuestro &ldquo;Fondo de Escape&rdquo;. ¡Prometemos enviar fotos desde algún lugar remoto mientras nuestro amor sigue creciendo!</p>
+                </div>
+                <div class="text-center">
+                    <button id="gift-modal-open" class="gift-open-btn gift-open-btn--primary" type="button">
+                        Quiero dejar un regalo
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <div id="gift-modal" class="gift-modal hidden" role="dialog" aria-modal="true" aria-labelledby="gift-modal-title">
+            <div class="gift-modal-card">
+                <div class="gift-modal-header">
+                    <div class="gift-modal-top">
+                        <h3 id="gift-modal-title" class="font-script text-4xl text-sage-dark">Opciones de regalo</h3>
+                        <button id="gift-modal-close" class="gift-modal-close" type="button" aria-label="Cerrar modal de regalos">
+                            <span class="material-symbols-outlined" aria-hidden="true">close</span>
+                        </button>
+                    </div>
+                    <span class="gift-modal-hint">Elige una experiencia y pulsa regalar para continuar.</span>
+                </div>
+                <div class="gift-modal-body">
+                    <div class="gift-grid">
+                        <details class="gift-card" data-gift-id="cena-paris" data-gift-name="Cena en la Torre Eiffel">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">restaurant</span></span>
+                                <span class="gift-title">Cena en la Torre Eiffel</span>
+                                <span class="gift-amount">$200.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/unnamed.jpg" alt="Cena en París" loading="lazy" />
+                                <p>Una noche inolvidable en París para celebrar nuestro amor a lo grande.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/cena-torre-eiffel" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                        <details class="gift-card" data-gift-id="zumbale-primo" data-gift-name="Ir a ver Zúmbale Primo en vivo">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">music_note</span></span>
+                                <span class="gift-title">Ir a ver Zúmbale Primo en vivo</span>
+                                <span class="gift-amount">$60.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/19ce5dbe-8ec1-48a0-9875-48db66c87870.jpg" alt="Zúmbale Primo en vivo" loading="lazy" />
+                                <p>Aporte para cantar, bailar y vivir una noche inolvidable juntos.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/zumbale-primo-en-vivo" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                        <details class="gift-card" data-gift-id="globo-amanecer" data-gift-name="Salto Ángel, Venezuela">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">landscape</span></span>
+                                <span class="gift-title">Aventura al Salto Ángel</span>
+                                <span class="gift-amount">$150.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/unnamed (5).jpg" alt="Salto Ángel" loading="lazy" />
+                                <p>Contribuye a esta experiencia inolvidable hacia la cascada más alta del mundo.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/salto-angel" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                        <details class="gift-card" data-gift-id="ruta-vinos" data-gift-name="Ver a Bad Bunny en concierto">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">stadium</span></span>
+                                <span class="gift-title">Ver a Bad Bunny en concierto</span>
+                                <span class="gift-amount">$200.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/unnamed (1).jpg" alt="Concierto de Bad Bunny" loading="lazy" />
+                                <p>Contribuye para vivir ese concierto que siempre hemos querido ver.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/bad-bunny" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                        <details class="gift-card" data-gift-id="escapada-mar" data-gift-name="Viaje al sur de Chile">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">forest</span></span>
+                                <span class="gift-title">Viaje al sur de Chile</span>
+                                <span class="gift-amount">$100.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/viajes-patagonia-blackpepper-0142-galeria-2x-2362x1572.jpg" alt="Sur de Chile" loading="lazy" />
+                                <p>Aporte para recorrer lagos, bosques y paisajes del sur chileno.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/sur-de-chile" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                        <details class="gift-card" data-gift-id="tren-andes" data-gift-name="Viajar por Europa">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">flight</span></span>
+                                <span class="gift-title">Viajar por Europa</span>
+                                <span class="gift-amount">$180.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/unnamed (2).jpg" alt="Viaje por Europa" loading="lazy" />
+                                <p>Un aporte para recorrer ciudades soñadas y crear recuerdos para toda la vida.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/viaje-europa" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                        <details class="gift-card" data-gift-id="noche-estrellas" data-gift-name="San Pedro de Atacama">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">dark_mode</span></span>
+                                <span class="gift-title">Noche astronómica en Atacama</span>
+                                <span class="gift-amount">$50.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/unnamed (3).jpg" alt="Atacama" loading="lazy" />
+                                <p>Contribuye a una noche de observación de estrellas en el desierto de Atacama.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/atacama" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                        <details class="gift-card" data-gift-id="isla-aventura" data-gift-name="Escapada a Chiloé">
+                            <summary class="gift-summary">
+                                <span class="gift-icon"><span class="material-symbols-outlined">cottage</span></span>
+                                <span class="gift-title">Viaje a New York</span>
+                                <span class="gift-amount">$120.000</span>
+                                <span class="gift-availability" data-gift-availability>Disponibles: --</span>
+                            </summary>
+                            <div class="gift-body">
+                                <img class="gift-image" src="assets/regalos/unnamed (4).jpg" alt="New York" loading="lazy" />
+                                <p>Aporte para descubrir la magia del sur, sus palafitos y su gastronomía.</p>
+                                <a class="gift-link" data-gift-link href="https://tu-pasarela.com/regalo/chiloe" target="_blank" rel="noopener noreferrer">Regalar</a>
+                            </div>
+                        </details>
+                    </div>
+                    <div class="gift-modal-footer">
+                        <button id="gift-modal-decline" class="gift-modal-decline" type="button">No quiero regalar nada</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="rsvp" class="section-padding bg-sage/10">
+            <div class="max-w-xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark mb-2">Confirma tu asistencia</h2>
+                    <p class="section-subtitle text-sage-dark/70 font-body tracking-wide">¡Súmate a nuestra aventura!</p>
+                </div>
+                <form id="rsvp-form"
+                    class="bg-white/80 backdrop-blur-sm border border-sage/30 rounded-lg p-8 space-y-6 shadow-sm">
+                    <div class="absolute -left-[9999px] opacity-0" aria-hidden="true">
+                        <label for="website">Website</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+                    </div>
+                    <div>
+                        <label for="name" class="text-sage-dark font-medium">Nombre completo *</label>
+                        <input id="name" required
+                            class="mt-2 flex h-10 w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-base ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                            placeholder="Tu nombre" />
+                    </div>
+                    <div>
+                        <label for="email" class="text-sage-dark font-medium">Email (opcional)</label>
+                        <input id="email" type="email"
+                            class="mt-2 flex h-10 w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-base ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                            placeholder="correo@ejemplo.com" />
+                    </div>
+                    <div>
+                        <label class="text-sage-dark font-medium">Asistencia *</label>
+                        <div class="mt-3 grid grid-cols-2 gap-3">
+                            <label
+                                class="flex items-center gap-2 rounded-md border border-sage/30 bg-ivory px-3 py-2 text-sm text-sage-dark">
+                                <input type="radio" name="attendance" value="yes" checked />
+                                Sí, asistiré
+                            </label>
+                            <label
+                                class="flex items-center gap-2 rounded-md border border-sage/30 bg-ivory px-3 py-2 text-sm text-sage-dark">
+                                <input type="radio" name="attendance" value="no" />
+                                No podré ir
+                            </label>
+                        </div>
+                    </div>
+                    <div id="with-partner-block" data-attendance="yes">
+                        <label class="text-sage-dark font-medium">¿Vienes con pareja? *</label>
+                        <div class="mt-3 grid grid-cols-2 gap-3">
+                            <label
+                                class="flex items-center gap-2 rounded-md border border-sage/30 bg-ivory px-3 py-2 text-sm text-sage-dark">
+                                <input type="radio" name="with-partner" value="yes" />
+                                Sí
+                            </label>
+                            <label
+                                class="flex items-center gap-2 rounded-md border border-sage/30 bg-ivory px-3 py-2 text-sm text-sage-dark">
+                                <input type="radio" name="with-partner" value="no" checked />
+                                No
+                            </label>
+                        </div>
+                        <p class="mt-2 text-sm text-sage-dark/60">Si vienes con pareja, completa los datos de ambos donde aplique.</p>
+                    </div>
+                    <div id="partner-fields" data-attendance="yes" class="hidden">
+                        <label for="partner-name" class="text-sage-dark font-medium">Nombre completo de tu pareja *</label>
+                        <input id="partner-name"
+                            class="mt-2 flex h-10 w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-base ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                            placeholder="Nombre completo de tu pareja" />
+                    </div>
+                    <div data-attendance="yes">
+                        <label class="text-sage-dark font-medium">Restricciones alimentarias (tú)</label>
+                        <div id="dietary-self-options" class="mt-3 grid grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center gap-2"><input type="checkbox" value="Sin gluten" />Sin
+                                gluten</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" value="Sin lactosa" />Sin
+                                lactosa</label>
+                            <label class="flex items-center gap-2"><input type="checkbox"
+                                    value="Vegetariano" />Vegetariano</label>
+                            <label class="flex items-center gap-2"><input type="checkbox"
+                                    value="Vegano" />Vegano</label>
+                        </div>
+                    </div>
+                    <div data-attendance="yes">
+                        <label for="dietary-other" class="text-sage-dark font-medium">Otras restricciones (tú)</label>
+                        <input id="dietary-other"
+                            class="mt-2 flex h-10 w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-base ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                            placeholder="Especifica si es necesario" />
+                    </div>
+                    <div id="partner-dietary-fields" data-attendance="yes" class="hidden">
+                        <label class="text-sage-dark font-medium">Restricciones alimentarias (pareja)</label>
+                        <div id="dietary-partner-options" class="mt-3 grid grid-cols-2 gap-2 text-sm">
+                            <label class="flex items-center gap-2"><input type="checkbox" value="Sin gluten" />Sin
+                                gluten</label>
+                            <label class="flex items-center gap-2"><input type="checkbox" value="Sin lactosa" />Sin
+                                lactosa</label>
+                            <label class="flex items-center gap-2"><input type="checkbox"
+                                    value="Vegetariano" />Vegetariano</label>
+                            <label class="flex items-center gap-2"><input type="checkbox"
+                                    value="Vegano" />Vegano</label>
+                        </div>
+                    </div>
+                    <div id="partner-other-field" data-attendance="yes" class="hidden">
+                        <label for="partner-dietary-other" class="text-sage-dark font-medium">Otras restricciones (pareja)</label>
+                        <input id="partner-dietary-other"
+                            class="mt-2 flex h-10 w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-base ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                            placeholder="Especifica si es necesario" />
+                    </div>
+                    <div data-attendance="yes">
+                        <label for="song" class="text-sage-dark font-medium">Canción sugerida</label>
+                        <input id="song"
+                            class="mt-2 flex h-10 w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-base ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                            placeholder="Tu tema favorito" />
+                    </div>
+                    <div>
+                        <label for="message" class="text-sage-dark font-medium">Mensaje</label>
+                        <textarea id="message" rows="3"
+                            class="mt-2 flex min-h-[80px] w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-sm ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                            placeholder="Déjanos un mensaje"></textarea>
+                    </div>
+                    <button type="submit"
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors bg-sage-dark hover:bg-sage-dark/90 text-white h-10 px-4 py-2 w-full">
+                        Enviar confirmación
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section id="photo-upload" class="section-padding bg-sage/10 hidden">
+            <div class="max-w-xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark mb-2">Comparte tus fotos</h2>
+                    <p class="section-subtitle text-sage-dark/70 font-body tracking-wide">Sube tus recuerdos del evento para guardarlos en nuestro album</p>
+                </div>
+                <form id="photo-upload-form"
+                    class="bg-white/80 backdrop-blur-sm border border-sage/30 rounded-lg p-8 space-y-6 shadow-sm">
+                    <div>
+                        <label for="photo-upload-name" class="text-sage-dark font-medium">Tu nombre *</label>
+                        <input id="photo-upload-name" required
+                            class="mt-2 flex h-10 w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-base ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 md:text-sm"
+                            placeholder="Escribe tu nombre" />
+                    </div>
+                    <div>
+                        <label for="photo-upload-files" class="text-sage-dark font-medium">Fotos *</label>
+                        <input id="photo-upload-files" type="file" accept="image/*" multiple required
+                            class="mt-2 block w-full text-sm text-sage-dark file:mr-4 file:rounded-md file:border-0 file:bg-sage-dark file:px-4 file:py-2 file:text-sm file:font-medium file:text-white hover:file:bg-sage-dark/90" />
+                        <p class="mt-2 text-sm text-sage-dark/60">Hasta 10 fotos por envio, maximo 8 MB por foto y 30 MB en total.</p>
+                        <div id="photo-preview-wrap" class="photo-preview-wrap hidden">
+                            <div class="photo-preview-header">
+                                <p class="photo-preview-title">Previsualización</p>
+                                <div class="photo-preview-actions">
+                                    <p id="photo-preview-count" class="photo-preview-count"></p>
+                                    <button id="photo-preview-add" class="photo-preview-add" type="button" aria-label="Agregar más fotos">+</button>
+                                </div>
+                            </div>
+                            <div class="photo-preview-carousel">
+                                <button id="photo-preview-prev" class="photo-preview-nav" type="button" aria-label="Ver fotos anteriores">
+                                    <span class="material-symbols-outlined">chevron_left</span>
+                                </button>
+                                <div id="photo-preview-viewport" class="photo-preview-viewport">
+                                    <div id="photo-preview-track" class="photo-preview-track"></div>
+                                </div>
+                                <button id="photo-preview-next" class="photo-preview-nav" type="button" aria-label="Ver fotos siguientes">
+                                    <span class="material-symbols-outlined">chevron_right</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="photo-upload-comment" class="text-sage-dark font-medium">Comentario (opcional)</label>
+                        <textarea id="photo-upload-comment" rows="3"
+                            class="mt-2 flex min-h-[80px] w-full rounded-md border border-sage/30 bg-ivory px-3 py-2 text-sm ring-offset-background placeholder:text-sage-dark/50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                            placeholder="Si quieres, dejanos un mensaje"></textarea>
+                    </div>
+                    <p id="photo-upload-notice" class="text-sm text-sage-dark/80" aria-live="polite"></p>
+                    <button type="submit"
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors bg-sage-dark hover:bg-sage-dark/90 text-white h-10 px-4 py-2 w-full">
+                        Enviar fotos
+                    </button>
+                </form>
+            </div>
+        </section>
+
+          <section class="section-padding bg-ivory" id="informacion">
+            <div class="max-w-3xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark">Información importante</h2>
+                </div>
+                <div class="space-y-4" id="faq">
+                   
+                    <div class="bg-white/80 backdrop-blur-sm border border-sage/30 px-6 rounded-lg">
+                        <button class="w-full text-left font-display text-lg text-sage-dark py-4" type="button"
+                            data-accordion-button>
+                            <span class="flex items-center gap-3" style="font-size: 20px;"><span class="text-sage-dark/60">Auto</span>Puedo
+                                llegar en auto?</span>
+                        </button>
+                        <div class="text-sage-dark/80 font-body pb-4" data-accordion-content hidden>
+                            Si, hay estacionamientos disponibles.
+                        </div>
+                    </div>
+                    <div class="bg-white/80 backdrop-blur-sm border border-sage/30 px-6 rounded-lg">
+                        <button class="w-full text-left font-display text-lg text-sage-dark py-4" type="button"
+                            data-accordion-button>
+                            <span class="flex items-center gap-3" style="font-size: 20px;"><span class="text-sage-dark/60">Niños</span>Se
+                                permiten niños?</span>
+                        </button>
+                        <div class="text-sage-dark/80 font-body pb-4" data-accordion-content hidden>
+                            Para que todos los invitados disfruten al máximo, hemos optado por una celebración solo para adultos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="rsvp-confirmation" class="hidden section-padding bg-ivory">
+            <div class="max-w-xl mx-auto text-center">
+                <h2 class="section-heading font-script text-4xl md:text-5xl text-sage-dark mb-6" id="confirmation-title">Gracias</h2>
+                <p class="text-sage-dark/80 font-body text-lg leading-relaxed" id="confirmation-message"></p>
+                <p class="text-sage-dark/60 font-script text-2xl mt-8" id="confirmation-signature">- Arianna &amp;
+                    Hector</p>
+                <div class="mt-10 hidden" id="calendar-block">
+                    <button id="add-to-calendar"
+                        class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors border border-sage-dark/30 text-sage-dark hover:bg-sage-dark hover:text-white h-10 px-4 py-2"
+                        type="button">
+                        Agregar al calendario
+                    </button>
+                    <p class="text-sage-dark/50 font-body text-sm max-w-md text-center leading-relaxed mt-4">
+                        Si necesitas modificar tu asistencia, avísanos por WhatsApp.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <div id="gift-confirmation" class="gift-confirmation hidden" role="dialog" aria-modal="true" aria-labelledby="gift-confirmation-title">
+            <div class="gift-confirmation-card">
+                <h2 id="gift-confirmation-title" class="font-script text-4xl text-sage-dark mb-3">¡Gracias por tu regalo!</h2>
+                <p id="gift-confirmation-message" class="text-sage-dark/80 font-body text-lg leading-relaxed">
+                    Hemos recibido tu regalo. Nos hace mucha ilusión.
+                </p>
+                <button id="gift-confirmation-close" class="gift-confirmation-close" type="button">Cerrar</button>
+            </div>
+        </div>
+    </main>
+
+    <div id="rsvp-video-overlay" class="fixed inset-0 z-50 items-center justify-center bg-ivory hidden">
+        <video id="rsvp-video" src="assets/rsvp-confirmation-DYbKwzwP.webm" autoplay muted playsinline
+            class="w-full h-full object-cover"></video>
+        <div id="rsvp-video-fade" class="absolute inset-0 bg-ivory pointer-events-none"></div>
+    </div>
+    <div id="photo-lightbox" class="photo-lightbox hidden" role="dialog" aria-modal="true" aria-label="Vista previa de foto">
+        <button id="photo-lightbox-close" class="photo-lightbox-close" type="button" aria-label="Cerrar vista previa">
+            <span class="material-symbols-outlined">close</span>
+        </button>
+        <img id="photo-lightbox-image" class="photo-lightbox-image" alt="Foto seleccionada" />
+    </div>
+
+    <footer class="py-16 bg-sage-dark text-center">
+        <div>
+            <p class="font-script text-3xl text-white mb-2">Arianna y Hector</p>
+            <p class="text-sm text-white/80 font-body tracking-wide">2 de mayo de 2026</p>
+            <p class="text-[10px] text-white/40 mt-12 font-body">Con amor, Ari y Hector</p>
+        </div>
+    </footer>
+
+    <script src="gift-config.js"></script>
+    <script src="rsvp-config.js"></script>
+    <script src="carousel-images.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
+
+
+
